@@ -8,6 +8,13 @@ public class Persona {
 	
 	private int edad;
 
+	public Persona(int idPersona, String nombrepersona, int edad) {
+		super();
+		this.idPersona = idPersona;
+		this.nombrepersona = nombrepersona;
+		this.edad = edad;
+	}
+
 	public int getIdPersona() {
 		return idPersona;
 	}

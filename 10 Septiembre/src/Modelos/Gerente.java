@@ -1,13 +1,35 @@
 package Modelos;
 
+import java.util.ArrayList;
+
 public class Gerente extends Persona {
 
 	private String puesto;
 	
+	private Cuenta cuenta;
 	
-	public Gerente(String puesto) {
-		super();
+	private ArrayList<TrajetaCredito> tarjetas;
+	
+
+	public ArrayList<TrajetaCredito> getTarjetas() {
+		return tarjetas;
+	}
+
+	public void setTarjetas(ArrayList<TrajetaCredito> tarjetas) {
+		this.tarjetas = tarjetas;
+	}
+
+	public Gerente(int idPersona, String nombrepersona, int edad, String puesto) {
+		super(idPersona, nombrepersona, edad);
 		this.puesto = puesto;
+	}
+
+	public Cuenta getCuenta() {
+		return cuenta;
+	}
+
+	public void setCuenta(Cuenta cuenta) {
+		this.cuenta = cuenta;
 	}
 
 	public String generaActividad() {
@@ -27,6 +49,12 @@ public class Gerente extends Persona {
 	public void setPuesto(String puesto) {
 		this.puesto = puesto;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Gerente [puesto=" + puesto + ", getIdPersona()=" + getIdPersona() + ", getNombrepersona()="
+				+ getNombrepersona() + ", getEdad()=" + getEdad() + "]";
+	}
+
 	
 }

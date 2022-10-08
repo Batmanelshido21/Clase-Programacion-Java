@@ -4,8 +4,9 @@ public class Intendente extends Persona{
 	
 	private String puesto;
 
-	public Intendente(String puesto) {
-		super();
+
+	public Intendente(int idPersona, String nombrepersona, int edad, String puesto) {
+		super(idPersona, nombrepersona, edad);
 		this.puesto = puesto;
 	}
 
